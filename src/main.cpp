@@ -6,7 +6,7 @@
 #define MESH_PORT 5555
 
 #define NEOPIXEL_PIN 14        // Pin where the NeoPixel is connected
-#define NUMPIXELS 8         // Number of NeoPixels
+#define NUMPIXELS 12         // Number of NeoPixels
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUMPIXELS, NEOPIXEL_PIN, NEO_GRB + NEO_KHZ800);
 
 const int buttonPin = 4;  // Pin number for the button
@@ -107,7 +107,7 @@ void continuousEffect() {
     case 0:
       strip.fill(0); // Turn off NeoPixels
       strip.show();
-      sendMorseCode("To find the truth  shoot for the moon  ");
+      sendMorseCode("JOTA tijdreizigers Scouting St Paulus Venlo");
 
       break;
     case 1:
@@ -257,10 +257,13 @@ void policeLights(int wait) {
     strip.setPixelColor(1, strip.Color(112, 0, 0)); // Red
     strip.setPixelColor(2, strip.Color(112, 0, 0)); // Red
     strip.setPixelColor(3, strip.Color(112, 0, 0)); // Red
-    strip.setPixelColor(4, strip.Color(0, 0, 255)); // Blue
-    strip.setPixelColor(5, strip.Color(0, 0, 255)); // Blue
+    strip.setPixelColor(4, strip.Color(112, 0, 0)); // Red
+    strip.setPixelColor(5, strip.Color(112, 0, 0)); // Red
     strip.setPixelColor(6, strip.Color(0, 0, 255)); // Blue
     strip.setPixelColor(7, strip.Color(0, 0, 255)); // Blue
+    strip.setPixelColor(8, strip.Color(0, 0, 255)); // Blue
+    strip.setPixelColor(9, strip.Color(0, 0, 255)); // Blue
+    strip.setPixelColor(10, strip.Color(0, 0, 255)); // Blue
     strip.show();
     if (!resumePause()){ 
       return; 
